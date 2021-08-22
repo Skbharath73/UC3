@@ -1,0 +1,21 @@
+#! /bin/bash
+
+daily_Hour=8;
+parttime_hour=4;
+Wage_per_hour=20;
+num=$(( RANDOM%3 ));
+if [[ num -eq 1 ]]
+then
+       echo "Present";
+       Daily_wage=$(( $Wage_per_hour * $daily_Hour ));
+elif [[ num -eq 2 ]]
+then
+		echo "Present And Parttime Employee";
+		Daily_wage=$(( $Wage_per_hour * $parttime_hour ));
+
+else
+      echo "Absent";
+      Daily_wage=0;
+fi
+echo $Daily_wage;
+
